@@ -9,6 +9,7 @@ TEST_CASE("Testing Regression 0") {
   auto result = reg.fit();
   CHECK(result.A == doctest::Approx(1.));
   CHECK(result.B == doctest::Approx(1.));
+  CHECK(result.numeri == 2);
 }
 
 TEST_CASE("Testing Regression 1") {
@@ -21,6 +22,7 @@ TEST_CASE("Testing Regression 1") {
   auto result = reg.fit();
   CHECK(result.A == doctest::Approx(-263.35));
   CHECK(result.B == doctest::Approx(3.71));
+  CHECK(result.numeri == 5);
 }
 
 TEST_CASE("Testing Regression 2") {
@@ -33,4 +35,5 @@ TEST_CASE("Testing Regression 2") {
   auto result = reg.fit();
   CHECK(result.A == doctest::Approx(-294.904));
   CHECK(result.B == doctest::Approx(3.817259));
+  CHECK(result.numeri == 5);
 }

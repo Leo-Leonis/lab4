@@ -1,18 +1,22 @@
 #ifndef REGRESSION_HPP
 #define REGRESSION_HPP
 
+#include <vector>
 struct Result {
   double A;
   double B;
+  int numeri;
 };
 
 class Regression {
  private:
-  int N_{};
-  double sumx_{};
-  double sumy_{};
-  double sumxx_{};
-  double sumxy_{};
+
+  struct Point {
+    double x;
+    double y;
+  };
+
+  std::vector<Point> points_{};
 
  public:
   void add(double x, double y);
