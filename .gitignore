@@ -1,2 +1,8 @@
 ##ignora a.out
 a.out
+
+##ignora test
+test
+
+##ignora la cartella .vscode
+.vscode/
