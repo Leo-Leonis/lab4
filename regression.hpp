@@ -14,6 +14,9 @@ class Regression {
   struct Point {
     double x;
     double y;
+    bool operator==(Point const& other) const {
+      return (x == other.x) && (y == other.y);
+    }
   };
 
   std::vector<Point> points_{};
@@ -21,6 +24,8 @@ class Regression {
  public:
   void add(double x, double y);
   Result fit() const;
+  void remove(double x, double y);
+  void display_vector();
 };
 
 #endif
