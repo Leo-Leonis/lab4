@@ -6,14 +6,15 @@
 void insert(int i, int n, Regression& reg) {
   double x;
   double y;
-  std::cout << '\n'
-            << "[INFO: iteration " << i << " of " << n << "]" << '\n'
-            << "Please insert the values of x and y separated by one space: ";
+  std::cout << "[INFO: point " << i << " of " << n << "]: ";
   std::cin >> x >> y;
   reg.add(x, y);
 }
 
 void loop_insert(int& i, int n, Regression& reg) {
+  std::cout << '\n' 
+            << "Please insert the values of x and y separated by one space: "
+            << '\n';
   while (i < n + 1) {
     insert(i, n, reg);
     ++i;
